@@ -1,21 +1,25 @@
-<!DOCTYPE html>
-<html>
-
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>sparta-project-1</title>
+  <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
 <body>
-  <form id="form1">
-    <p id="question"></p>
-    <input name="name" type="text">
-    <button type="button" onclick="checkAnswer()">Check</button>
-  </form>
-  <p id="demo"></p>
+  <div class="questionbox">
+    <h1 class="gametitle">VROOM VROOM, Hurry up and answer the questions! </h1>
+    <div id="question"></div>
+    <div class="input">
+      <input type="text" id="answer">
+    </div>
+    <div class="buttonbox">
+      <button class="button" id="checkAnswer">Check Answer</button>
+    </div>
+    <div class="results">
+      <div id="result"></div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>

@@ -1,0 +1,43 @@
+.gametitle {
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: white;
+}
+
+#question {
+  font-size: 50px;
+  color: white;
+}
+
+#answer {
+  height: 30px;
+}
+
+.buttonbox {
+  padding-top: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.button {
+  font-size: 20px;
+  background-color: #2E0014;
+  color: white;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.results {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 20px;
+  padding-top: 20px;
+  color: white;
+}
+
+.questionbox {
+  text-align: center;
+  width: 300px;
+  padding: 60px;
+  border-radius: 12px;
+  background-color: #B40404;
+}
