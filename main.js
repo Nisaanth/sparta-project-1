@@ -15,6 +15,11 @@
 // creating a variable for the correct answer to hold 
 var correctAnswer;
 
+// need to add points as global variable;
+
+let points = 0;
+
+
 // funtion to clear the input value 
 function resetInput() {
   document.getElementById("answer").value = '';
@@ -63,18 +68,24 @@ function makeQuestion() {
   // question should appear on question box with randomised numbers and operator
   document.getElementById('question').append(`${num1} ${operatorString} ${num2}`);
 }
+// *************************************************************
+const pointsDisplay = document.querySelector("#points")
+// **************************************************************
 
 //Function to check correct answer and respond
 function checkAnswer() {
   // checks the iput against the correct answer
   var answer = document.getElementById('answer').value;
   if (answer == correctAnswer) {
+    points++;
+    pointsDisplay.innerHTML = points;
     return 'Well done! your answer is right. Keep Moving!';
   } else {
+    points--;
+    pointsDisplay.innerHTML = points;
     return 'Damn! your answer is wrong.';
   }
 }
-
 function appendResult(result) {
   // refreshes response 
   document.getElementById('result').innerHTML = '';
@@ -93,11 +104,42 @@ document.getElementById('checkAnswer').addEventListener('click', function resetW
 // When calling this function, you produce the randomised numbers,operator, and set the correct answer as well as append it to the question div
 makeQuestion();
 
-// need to add points as global variable;
+
+
+
+
 
 
 // ********************************************************** countdown timer ********************************************************
 
+var timer = 60;
+var min = 0;
+var sec = 0;
+// function startTimer() {
+//   min = parseInt(timer / 60);
+//   sec = parseInt(timer % 60);
+//   if (timer < 1) {
+//     window.location = "timeOver.html";
+//   }
+//   document.getElementById("time").innerHTML = "<b>Time Left: </b>" + min.toString() + ":" + sec.toString(); timer--; setTimeout(function () {
+//     startTimer();
+//   }, 1000);
+// }
+
+function countDown() {
+  setInterval(function () {
+    timer--;
+    document.getElementById("timer").innerHTML = timer
+    if (timer === 0) {
+      alert("Time out!")
+
+
+
+    }
+  }, 1000)
+}
+
+countDown()
 
 
 
