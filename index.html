@@ -1,34 +1,23 @@
+<!DOCTYPE html>
+<html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>Home Page </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
 <body>
-  <div class="questionbox">
-    <div class="timer">
-      <p id="timer">60</p>
+  <div class="instructionBox">
+    <h1 class="welcome">Welcome</h1><br>
+    <div>
+      <p class="paragraph">Hello Guys! Welcome to level 1, the instructions are simple, answer the questions by typing
+        your answer in the input and race your car to the finishing line! </p>
     </div>
-    <div id="timeout"></div>
-    <div class="finish">
-      <h1 class="gametitle">VROOM VROOM, Hurry up and answer the questions! </h1>
-      <div id="question"></div>
-      <div class="input">
-        <input type="text" id="answer" autofocus>
-      </div>
-      <div class="scorebox">Score : <span id="points">0</span></div>
-      <div class="buttonbox">
-        <button class="button" id="checkAnswer">Check Answer</button>
-      </div>
-      <div class="results">
-        <div id="result"></div>
-      </div>
-    </div>
-  </div>
-  <div id="carImg" class="car">
-    <img src="ferrari_PNG10674.png" alt="carImage">
+    <div class="letsRace"><a href="/game.html" style="color: #ffffff">Let's Race!</a></div>
+    <img id="fcover" src="/ferrari_cover.png" alt="">
   </div>
   <script src="main.js"></script>
 </body>
