@@ -13,18 +13,15 @@
 // *************************************psuedo code **************************************
 
 // creating a variable for the correct answer to hold 
-var correctAnswer;
+var correctAnswer = 0;
 
 // need to add points as global variable;
-
 let points = 0;
-
 
 // funtion to clear the input value 
 function resetInput() {
   document.getElementById("answer").value = '';
 }
-
 
 // Creating random numbers for quiz 
 // /*used Math.random to create a random number from 0 < 1, multimplied it then by 10 to get numbers between 0 < 10 and then added 1 to get numbers from 1 <= 10. Used Math.floor to round down any decimal number*/
@@ -51,8 +48,6 @@ function makeQuestion() {
   var num1 = randomNumber();
   var num2 = randomNumber();
   var operatorString = randomOperator(Math.floor(Math.random() * 3))
-
-
   // creating a statement to randomise operator
   if (operatorString === "+") {
     correctAnswer = num1 + num2;
@@ -69,7 +64,7 @@ function makeQuestion() {
   document.getElementById('question').append(`${num1} ${operatorString} ${num2}`);
 }
 // *************************************************************
-const pointsDisplay = document.querySelector("#points")
+var pointsDisplay = document.getElementById("points")
 // **************************************************************
 
 //Function to check correct answer and respond
@@ -78,6 +73,7 @@ function checkAnswer() {
   var answer = document.getElementById('answer').value;
   if (answer == correctAnswer) {
     points++;
+    moveCar()
     pointsDisplay.innerHTML = points;
     return 'Well done! your answer is right. Keep Moving!';
   } else {
@@ -86,11 +82,11 @@ function checkAnswer() {
     return 'Damn! your answer is wrong.';
   }
 }
-function appendResult(result) {
+function appendResult(results) {
   // refreshes response 
   document.getElementById('result').innerHTML = '';
   // prints out the response 
-  document.getElementById('result').append(result);
+  document.getElementById('result').append(results);
 }
 
 // after clicking the button, the question box resets with a new question, empty input as well as giving a response for the current answer. 
@@ -99,47 +95,83 @@ document.getElementById('checkAnswer').addEventListener('click', function resetW
   appendResult(checkAnswer());
   resetInput();
   makeQuestion();
+
 })
+
+// Move car
+function moveCar() {
+  let car = document.getElementById("carImg")
+  switch (points) {
+    case 1:
+      car.style.paddingLeft = "25px"
+      break;
+    case 2:
+      car.style.paddingLeft = "50px"
+      break;
+
+    case 3:
+      car.style.paddingLeft = "75px"
+      break;
+
+    case 4:
+      car.style.paddingLeft = "100px"
+      break;
+
+    case 2:
+      car.style.paddingLeft = "125px"
+      break;
+
+    case 2:
+      car.style.paddingLeft = "150px"
+      break;
+
+    case 2:
+      car.style.paddingLeft = "175px"
+      break;
+
+    case 2:
+      car.style.paddingLeft = "200px"
+      break;
+
+    case 2:
+      car.style.paddingLeft = "225px"
+      break;
+
+    case 2:
+      car.style.paddingLeft = "250px"
+      break;
+
+  }
+}
+
+
+
+
+
 
 // When calling this function, you produce the randomised numbers,operator, and set the correct answer as well as append it to the question div
 makeQuestion();
 
-
-
-
-
-
-
 // ********************************************************** countdown timer ********************************************************
 
 var timer = 60;
-var min = 0;
-var sec = 0;
-// function startTimer() {
-//   min = parseInt(timer / 60);
-//   sec = parseInt(timer % 60);
-//   if (timer < 1) {
-//     window.location = "timeOver.html";
-//   }
-//   document.getElementById("time").innerHTML = "<b>Time Left: </b>" + min.toString() + ":" + sec.toString(); timer--; setTimeout(function () {
-//     startTimer();
-//   }, 1000);
-// }
-
 function countDown() {
   setInterval(function () {
-    timer--;
+    if (timer > 0) { timer--; }
     document.getElementById("timer").innerHTML = timer
     if (timer === 0) {
-      alert("Time out!")
-
-
-
+      document.getElementById('timeout').innerHTML = " You Lost!";
+      // *********************************************************
+      document.getElementById('gametitle').style.display = 'none';
+      // *********************************************************
     }
   }, 1000)
 }
 
 countDown()
 
+// car bit - till the middle of the day - change css value of the car to make it move
 
+
+// styling - start page/instructions
 

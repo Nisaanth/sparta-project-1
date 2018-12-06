@@ -8,23 +8,28 @@
 
 <body>
   <div class="questionbox">
-    <h1 class="gametitle">VROOM VROOM, Hurry up and answer the questions! </h1>
-    <div id="question"></div>
-    <div class="input">
-      <input type="text" id="answer">
+    <div class="timer">
+      <p id="timer">60</p>
     </div>
-    <div>Score : <span id="points">0</span></div>
-    <div class="buttonbox">
-      <button class="button" id="checkAnswer">Check Answer</button>
-    </div>
-    <div class="results">
-      <div id="result"></div>
+    <div id="timeout"></div>
+    <div class="finish">
+      <h1 class="gametitle">VROOM VROOM, Hurry up and answer the questions! </h1>
+      <div id="question"></div>
+      <div class="input">
+        <input type="text" id="answer" autofocus>
+      </div>
+      <div class="scorebox">Score : <span id="points">0</span></div>
+      <div class="buttonbox">
+        <button class="button" id="checkAnswer">Check Answer</button>
+      </div>
+      <div class="results">
+        <div id="result"></div>
+      </div>
     </div>
   </div>
-  <div class="timer">
-    <p id="timer">60</p>
+  <div id="carImg" class="car">
+    <img src="ferrari_PNG10674.png" alt="carImage">
   </div>
-
   <script src="main.js"></script>
 </body>
 
