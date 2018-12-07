@@ -13,7 +13,7 @@ Created a maths based quiz Game where you get randomly generated numbers and mat
 3. User should be directed to the intro page. 
 
 
-#### You can view the page [here]()
+#### You can view the page [https://nisaanth.github.io/sparta-project-1/]()
 
 ### Challenges (you can include images and code block here)
 1. How to get the logic of the game right  
