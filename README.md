@@ -15,7 +15,7 @@ Created a maths based quiz Game where you get randomly generated numbers and mat
 
 #### You can view the page [https://nisaanth.github.io/sparta-project-1/]()
 
-### Challenges (you can include images and code block here)
+### Challenges 
 1. How to get the logic of the game right  
 2. creating a function to randomise the maths operator
 3. make a switch statement to move the car in response to the input 
